@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<form action="/action_page.php">
+		<p id="nameenter"><label for="uname"><b>Enter Your Name </b></label></p>
+		<p id="entry"><input type="text" placeholder="Name" name="uname" required></p>
+		<button id="begin" type="submit" onclick="save()">Begin</button>
+	</form>
+	<script>
+		window.onload = checkName;
+		function checkName(){
+			if (localStorage.getItem("username") === null{
+				
+			}
+			else {
+				alert("Welcome back, " localStorage.getItem("username"));
+			}
+		}
+		function save() {
+			var user = document.getElementById("uname").value;
+			localStorage.setItem("username", user);
+		}
+	</script>	
+</body>
+</html>
